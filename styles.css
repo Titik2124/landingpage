@@ -317,111 +317,25 @@ h3 {
   position: relative;
 }
 
-.hero-visual::before {
-  background:
-    radial-gradient(circle at 28% 32%, rgba(245, 166, 35, 0.45) 0 9%, transparent 10%),
-    radial-gradient(circle at 76% 26%, rgba(54, 168, 83, 0.26) 0 8%, transparent 9%),
-    linear-gradient(135deg, #fefefe, #f4e3f7 55%, #e7fbf5);
-  border: 1px solid rgba(123, 45, 142, 0.12);
-  border-radius: 34px;
-  box-shadow: var(--shadow);
-  content: "";
-  inset: 8% 3% 0;
-  position: absolute;
-  z-index: -2;
-}
-
-.cup {
+.hero-img {
   animation: floatCup 5.5s ease-in-out infinite;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 26px 26px 42px 42px;
-  box-shadow: inset 0 0 28px rgba(255, 255, 255, 0.34), 0 32px 52px rgba(57, 24, 65, 0.22);
+  border-radius: 20px;
+  box-shadow: 0 24px 44px rgba(57, 24, 65, 0.2);
+  object-fit: cover;
   position: relative;
 }
 
-.cup-small {
+.hero-img-large {
+  height: 420px;
+  width: 260px;
+}
+
+.hero-img-small {
   animation-delay: -1.3s;
-}
-
-.cup-large {
-  height: 390px;
-  width: 210px;
-}
-
-.cup-small {
-  height: 286px;
+  height: 310px;
   margin-bottom: 18px;
   margin-left: -28px;
-  width: 154px;
-}
-
-.taro {
-  background: linear-gradient(180deg, #d8b9ea 0 22%, #9b5db0 23% 74%, #4b165d 75%);
-}
-
-.mango {
-  background: linear-gradient(180deg, #ffeebc 0 20%, #f5a623 21% 68%, #e84a7f 69%);
-}
-
-.straw {
-  background: #5d1c70;
-  border-radius: 999px;
-  height: 230px;
-  left: 48%;
-  position: absolute;
-  top: -126px;
-  transform: rotate(9deg);
-  width: 14px;
-  z-index: -1;
-}
-
-.cup-small .straw {
-  height: 174px;
-  top: -96px;
-  width: 11px;
-}
-
-.lid {
-  background: rgba(255, 255, 255, 0.84);
-  border-radius: 28px 28px 8px 8px;
-  height: 34px;
-  left: 14px;
-  position: absolute;
-  right: 14px;
-  top: -16px;
-}
-
-.drink-shine {
-  background: rgba(255, 255, 255, 0.42);
-  border-radius: 999px;
-  bottom: 92px;
-  position: absolute;
-  right: 28px;
-  top: 48px;
-  width: 18px;
-}
-
-.pearls {
-  background:
-    radial-gradient(circle, #211626 0 45%, transparent 47%) 12px 18px / 38px 38px,
-    radial-gradient(circle, #211626 0 45%, transparent 47%) 28px 6px / 46px 46px;
-  bottom: 16px;
-  height: 84px;
-  left: 18px;
-  position: absolute;
-  right: 18px;
-}
-
-.cup-label {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 999px;
-  color: var(--deep-purple);
-  font-weight: 950;
-  left: 50%;
-  padding: 7px 15px;
-  position: absolute;
-  top: 44%;
-  transform: translateX(-50%);
+  width: 200px;
 }
 
 .flavor-card {
@@ -503,7 +417,7 @@ h3 {
 .product-card {
   display: grid;
   gap: 16px;
-  grid-template-rows: 164px 1fr;
+  grid-template-rows: 200px 1fr;
   min-height: 360px;
   padding: 16px;
   transition: opacity 160ms ease, transform 180ms ease;
@@ -519,119 +433,25 @@ h3 {
   display: none;
 }
 
-.product-art {
-  align-items: end;
+.product-img-wrap {
   border-radius: 8px;
-  display: flex;
-  justify-content: center;
   overflow: hidden;
-  position: relative;
+  background: #f8f2fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.product-art::before {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  content: "";
-  height: 112px;
-  position: absolute;
-  top: 22px;
-  width: 112px;
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  transition: transform 260ms ease;
 }
 
-.product-art span {
-  border-radius: 18px 18px 30px 30px;
-  bottom: 14px;
-  box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.45);
-  height: 122px;
-  position: relative;
-  width: 70px;
-}
-
-.product-art span::before {
-  background: rgba(255, 255, 255, 0.82);
-  border-radius: 14px 14px 4px 4px;
-  content: "";
-  height: 16px;
-  left: 7px;
-  position: absolute;
-  right: 7px;
-  top: -8px;
-}
-
-.product-art span::after {
-  background:
-    radial-gradient(circle, #211626 0 46%, transparent 48%) 0 0 / 18px 18px,
-    radial-gradient(circle, #211626 0 46%, transparent 48%) 9px 5px / 20px 20px;
-  bottom: 8px;
-  content: "";
-  height: 34px;
-  left: 8px;
-  position: absolute;
-  right: 8px;
-}
-
-.product-art.purple {
-  background: #efe2f4;
-}
-
-.product-art.purple span {
-  background: linear-gradient(#d4b8e0, #7b2d8e 70%, #4b165d 71%);
-}
-
-.product-art.rose {
-  background: #fde8ef;
-}
-
-.product-art.rose span {
-  background: linear-gradient(#f8dbc0, #c07148 58%, #e84a7f 59%);
-}
-
-.product-art.green {
-  background: #e6f6ed;
-}
-
-.product-art.green span {
-  background: linear-gradient(#cde8a2, #36a853 68%, #1b6f3c 69%);
-}
-
-.product-art.yellow {
-  background: #fff1cc;
-}
-
-.product-art.yellow span {
-  background: linear-gradient(#fff7cd, #f5a623 68%, #cc7b0f 69%);
-}
-
-.product-art.coffee {
-  background: #f1e5d6;
-}
-
-.product-art.coffee span {
-  background: linear-gradient(#dcbf9c, #8a5b39 70%, #3b2416 71%);
-}
-
-.product-art.blue {
-  background: #e3f7f8;
-}
-
-.product-art.blue span {
-  background: linear-gradient(#d9f5e9, #009b9b 70%, #0b5c62 71%);
-}
-
-.product-art.pink {
-  background: #fdebf3;
-}
-
-.product-art.pink span {
-  background: linear-gradient(#ffd8e7, #e84a7f 70%, #8c224d 71%);
-}
-
-.product-art.orange {
-  background: #ffead7;
-}
-
-.product-art.orange span {
-  background: linear-gradient(#ffcf9d, #f47f28 70%, #9a4315 71%);
+.product-card:hover .product-img {
+  transform: scale(1.06);
 }
 
 .product-tag {
@@ -1432,31 +1252,14 @@ textarea:focus {
     min-height: 390px;
   }
 
-  .hero-visual::before {
-    border-radius: 18px;
-    inset: 7% 0 0;
+  .hero-img-large {
+    height: 320px;
+    width: 200px;
   }
 
-  .cup-large {
-    height: 300px;
-    width: 162px;
-  }
-
-  .cup-small {
-    height: 220px;
-    width: 120px;
-  }
-
-  .straw {
-    height: 178px;
-    top: -98px;
-    width: 11px;
-  }
-
-  .cup-small .straw {
-    height: 135px;
-    top: -74px;
-    width: 9px;
+  .hero-img-small {
+    height: 240px;
+    width: 155px;
   }
 
   .flavor-card {
@@ -1550,7 +1353,7 @@ textarea:focus {
     transition: none !important;
   }
 
-  .cup {
+  .hero-img {
     animation: none !important;
   }
 }
