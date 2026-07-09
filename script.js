@@ -171,7 +171,7 @@ const updateCart = () => {
     `Total estimasi: ${formatRupiah(total)}`
   ].join("\n\n");
 
-  whatsappOrder.href = `https://wa.me/?text=${encodeURIComponent(message)}`;
+  whatsappOrder.href = `https://wa.me/6282324726190?text=${encodeURIComponent(message)}`;
   whatsappOrder.classList.remove("disabled");
   whatsappOrder.removeAttribute("aria-disabled");
   clearCart.disabled = false;
