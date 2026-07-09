@@ -32,8 +32,9 @@ const drinkPrices = {
   "Lemon Black Tea": 23000,
   "Coffee Milk Tea": 28000,
   "Matcha Smoothie": 31000,
-  "Berry Cream Tea": 30000,
-  "Thai Tea Crunch": 30000
+  "Hazelnut Chocolate": 29000,
+  "Thai Tea Crunch": 30000,
+  "Milky Taro": 27000
 };
 
 const toppingPrices = {
